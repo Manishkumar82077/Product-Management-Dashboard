@@ -21,7 +21,7 @@ A web-based dashboard application that allows sellers to manage their products e
 
 ## Deployment
 
-**Live Demo**: [View Deployed Application](https://your-deploy-service.com/seller-dashboard)  
+**Live Demo**: [View Deployed Application](https://product-managment-dashboard-sand.vercel.app)  
 
 ### Deployment Screenshots
 
