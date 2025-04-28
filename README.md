@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# Seller Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based dashboard application that allows sellers to manage their products efficiently. This app enables sellers to add new products, search, filter by categories, sort products, and view the product details in an organized table with pagination.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add New Product**: Easily add new products via a form modal.
+- **Search Products**: Quickly search products by their title.
+- **Filter by Category**: Filter products based on their categories.
+- **Sort Products**: Sort products by title or other criteria (e.g., price).
+- **Pagination**: Paginated view for managing large lists of products.
+- **Stock Warning**: Products with stock less than 10 are highlighted in red to signal low inventory.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for custom styling.
+- **TypeScript**: For type safety and better development experience.
+- **React Hooks**: Using `useState`, `useEffect` for state management and side effects.
+- **Custom Components**: Organized components for modular design (e.g., `ProductTable`, `ProductFormModal`, `SearchBar`, `CategoryFilter`).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Deployment
+
+**Live Demo**: [View Deployed Application](https://your-deploy-service.com/seller-dashboard)  
+
+### Deployment Screenshots
+
+| Page | Screenshot | Description |
+|------|------------|-------------|
+| 1    | ![Page1](ss/page1.png) | Dashboard Overview |
+| 2    | ![Page2](ss/page2.png) | Product Table View |
+| 3    | ![Page3](ss/page3.png) | Add Product Form |
+| 4    | ![Page4](ss/page4.pngg) | Pagination Example |
+
+---
+## Installation
+
+### Prerequisites
+
+- Node.js and npm installed. If you don't have them installed, please follow the official Node.js guide to install them:
+  - [Install Node.js](https://nodejs.org/)
+
+### Steps to Set Up
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone <https://github.com/Manishkumar82077/Product-Management-Dashboard>
+2. **Navigate to the project folder**:
+ ```
+    cd seller-dashboard
+ ```
+
+3. **Install dependencies:**:
+ ```
+    npm install
+ ```
+
+4. **Start the development server:**:
+```
+    npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Usage
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Search**: Filter products by title using the search bar.  
+- **Category Filter**: Select a category from the dropdown.  
+- **Sort Options**: Sort products by title/price.  
+- **Add Product**: Click "Add New Product" to open the form.  
+- **Low Stock Alert**: Stock < 10 is highlighted in red.  
+
+
+## Project Structure
+
+```plaintext
+📁 src/
+├── 📁 components/
+│   ├── 📄 ProductRow.tsx
+│   ├── 📄 ProductTable.tsx
+│   ├── 📄 ProductFormModal.tsx
+│   ├── 📄 SearchBar.tsx
+│   ├── 📄 CategoryFilter.tsx
+│   ├── 📄 SortOptions.tsx
+│   └── 📄 Pagination.tsx
+├── 📁 services/
+│   └── 📄 productService.ts
+├── 📁 types/
+│   └── 📄 Product.ts
+├── 📄 App.tsx
+├── 📄 index.tsx
+├── 📄 tailwind.config.js
+└── 📄 tsconfig.json
